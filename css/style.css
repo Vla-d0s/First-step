@@ -1,0 +1,90 @@
+@import url('reset.css');
+body{
+    margin: 0px;
+}
+h1,h2,h3,h4{
+    font-weight:700;
+}
+p{
+    margin: 16px 0px;
+}
+h2,h3{
+    margin:25px 0px;
+}
+h1{
+    margin:33px 0px;
+}
+h4{
+    margin: 21px 0px;
+}
+.main{
+    width: 1200px; 
+    margin: 0px auto; 
+    border: 2px solid black; 
+    padding: 0px 10px; 
+    background: black;
+}
+h1,h2{
+    text-align:center;
+}
+h1{
+    color:blueviolet; font-size: 50px
+}
+h2{
+    font-size:30px;
+}
+h3{
+    font-size:25px;
+    padding:0px 10px;
+}
+div.main>div>div{
+    padding:25px;
+}
+.main>p{
+    text-align:justify; 
+    color: blue; 
+    font-size:25px;
+}
+.main>div>p{
+    font-size:20px;
+}
+.main>div{
+    color:green;
+}
+.main>div+div{
+    color:white;
+}
+.main>div+div+div{
+    color:red;
+}
+img{
+    height:300px;
+    display: block;
+}
+.inline_block{
+    display: inline-block;
+    position:relative;
+}
+.position{
+    color:rgba(0, 0, 0, 0.486);
+    background: rgba(211, 211, 211, 0.485);
+    font-weight:800;
+    position:absolute;
+    width: 100%;
+    top:50%;
+    margin-top:-8px;
+    text-align:center;
+}
+a{
+    display:block;
+}
+.link_block{
+    background:rgb(0, 171, 0);
+    position:fixed;
+    padding:15px;
+    left:10px;
+    top:50%;
+    margin-top:-165px;
+    text-align:center;
+    font-size:25px;
+}

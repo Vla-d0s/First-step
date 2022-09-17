@@ -1,0 +1,30 @@
+@import url('/mySite/css/reset.css');
+.wrapper{
+    width:1200px;
+    margin: 0px auto;
+    outline: 2px solid red;
+}
+.first{
+    background: lightgoldenrodyellow;
+}
+.second{
+    background:lightcoral;
+}
+.third{
+    background: lightblue;
+}
+.fourth{
+    background:lightgray;
+}
+.half{
+    width:50%;
+}
+.table{
+    display: table-cell;
+}
+.thirdBlock>div{
+    width:600px;
+}
+.wide{
+    width: 800px;
+}
