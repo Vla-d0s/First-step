@@ -1,4 +1,49 @@
-@import url('reset.css');
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Main */
 body{
     margin: 0px;
 }
@@ -87,4 +132,168 @@ a{
     margin-top:-165px;
     text-align:center;
     font-size:25px;
+}
+
+/* Blocks */
+.wrapper{
+    width:1200px;
+    margin: 0px auto;
+    outline: 2px solid red;
+}
+.first{
+    background: lightgoldenrodyellow;
+}
+.second{
+    background:lightcoral;
+}
+.third{
+    background: lightblue;
+}
+.fourth{
+    background:lightgray;
+}
+.half{
+    width:50%;
+}
+.wide{
+    width: 800px;
+}
+.short{
+    width:400px;
+}
+
+/* TableCell */
+.table{
+    display: table-cell;
+}
+.thirdBlock>div{
+    width:600px;
+}
+
+/* Inline-Block */
+.in_block{
+    display: inline-block;
+}
+.size0{
+    font-size:0px;
+}
+.size0>div{
+    font-size:16px;
+}
+.center{
+    vertical-align:top;
+}
+
+/* Float */
+.float:after{
+    content:"";
+    clear: both;
+    display: block;
+}
+.in_float{
+    float: left;
+}
+/* float with div */
+.after{
+    content:"";
+    clear: both;
+    display: block;
+}
+
+/* Flexbox */
+.halfFlex{
+    flex: 0 1 50%;
+}
+.wideFlex{
+    flex: 0 1 800px;
+}
+.shortFlex{
+    flex: 0 1 400px;
+}
+.flex{
+    display: flex;
+}
+
+/* Grid */
+.twoOnOne{
+    grid-template-columns: 800px 400px;
+}
+.threeOnOne{
+    grid-template-columns: repeat(3,1fr)
+}
+.halfOnGrid{
+    grid-template-columns: repeat(2,1fr);
+}
+.grid{
+    display: grid;
+}
+
+/* Grid whith Areas */
+.grid{
+    display: grid;
+    grid-template-areas:
+    "A A A A    B B B B     C C C C"
+    "G G G G    G G G G     V V V V"
+    "G G G G    G G G G     N N N N"
+    "H H H H    H H H H     N N N N"
+    "H H H H    H H H H     M M M M"
+    "J J J J    J J K K     K K K K"
+    "F F F Z    Z Z K K     K K K K"
+    "Q Q Q Q    Q Q Q Q     L L L L"
+    "I I I I    O O O O     L L L L"
+    "I I I I    D D D D     L L L L";
+}
+.a{
+    grid-area:A;   
+}
+.b{
+    grid-area:B;
+}
+.c{
+    grid-area:C;
+}
+.g{
+    grid-area:G;
+}
+.h{
+    grid-area:H;
+}
+.v{
+    grid-area:V;
+}
+.n{
+    grid-area:N;
+}
+.m{
+    grid-area:M;
+}
+.j{
+    grid-area:J;
+    width:600px;
+}
+.k{
+    grid-area:K;
+}
+.f{
+    width:300px;
+    grid-area:F;
+}
+.z{
+    width:300px;
+    grid-area:Z;
+}
+.q{
+    grid-area:Q;
+}
+.o{
+    grid-area:O;
+}
+.i{
+    grid-area:I;
+}
+.l{
+    grid-area:L;
+}
+.d{
+    grid-area:D;
 }
