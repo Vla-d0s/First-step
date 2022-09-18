@@ -42,6 +42,67 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/* Menu */
+.menu{
+    position: relative;
+    font-size: 0px;
+    text-align:center;
+    z-index: 5;
+}
+.menu li{
+    background: yellowgreen;
+    display: inline-block;
+    font-size: 40px;
+    position: relative;
+    width: 300px;
+}
+.menu li:hover{
+    background: aqua;
+}
+.menu>li+li{
+    border-left: 2px solid red;
+}
+.menu li a{
+    padding:20px 60px;
+    display:block;
+    text-decoration:none;
+}
+.menu ul{
+    position: absolute;
+    padding: 20px 0 0;
+    height: 0px;
+    overflow: hidden;
+}
+ul li:hover>ul{
+    height: auto;
+    overflow: visible;
+}
+.menu>li>ul{
+    top:100%;
+    left: 0px;
+}
+ul ul>li+li{
+    border-top: 2px solid red;
+}
+.menu .menuFloat{
+    right:100%;
+    padding: 0px 20px 0px;
+    bottom: 0px;
+}
+.menu .menuGrid{
+    left: 100%;
+    top:0px;
+    padding: 0px 20px 0px;
+}
+.menu>li:last-child>a:after{
+    content:" ↓"
+}
+.menu>li>ul>li:last-child>a:after{
+    content:" →"
+}
+.menu>li>ul>li:nth-child(3)>a:before{
+    content:"← "
+}
 
 /* Main */
 body{
@@ -73,7 +134,7 @@ h1,h2{
     text-align:center;
 }
 h1{
-    color:blueviolet; font-size: 50px
+    color:aqua; font-size: 50px
 }
 h2{
     font-size:30px;
@@ -87,7 +148,7 @@ div.main>div>div{
 }
 .main>p{
     text-align:justify; 
-    color: blue; 
+    color: blueviolet; 
     font-size:25px;
 }
 .main>div>p{
@@ -110,6 +171,10 @@ img{
     display: inline-block;
     position:relative;
 }
+.inline_block>img{
+    width:800px;
+    height: auto;
+}
 .position{
     color:rgba(0, 0, 0, 0.486);
     background: rgba(211, 211, 211, 0.485);
@@ -117,8 +182,14 @@ img{
     position:absolute;
     width: 100%;
     top:50%;
-    margin-top:-8px;
+    font-size:26px;
+    margin-top:-13px;
     text-align:center;
+    height: 0;
+    overflow:hidden;
+}
+.inline_block:hover .position{
+    height: auto;
 }
 a{
     display:block;
