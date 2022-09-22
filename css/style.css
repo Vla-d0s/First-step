@@ -94,15 +94,71 @@ ul ul>li+li{
     top:0px;
     padding: 0px 20px 0px;
 }
-.menu>li:last-child>a:after{
-    content:" ↓"
+.menu>li:first-child:after{
+    content:"";
+    width: 50px;
+    height: 50px;
+    background: url('css_sprites.png') -250px -200px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
 }
-.menu>li>ul>li:last-child>a:after{
-    content:" →"
+.menu>li:first-child:hover:after{
+    background: url('css_sprites.png') -200px -200px;
+
 }
-.menu>li>ul>li:nth-child(3)>a:before{
-    content:"← "
+.menu>li:nth-child(2):after{
+    content:"";
+    width: 50px;
+    height: 50px;
+    background: url('css_sprites.png') -300px -0px;
+    position: absolute;
+    left: 10px;
+    top: 15px;
 }
+.menu>li:nth-child(2):hover:after{
+    background: url('css_sprites.png') -300px -250px;
+
+}
+.menu>li:last-child:after{
+    content:"";
+    width: 50px;
+    height: 50px;
+    background: url('css_sprites.png') -300px -50px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+.menu>li:last-child:hover:after{
+    background: url('css_sprites.png') -300px -200px;
+
+}
+.menu>li>ul>li:last-child:before{
+    content:"";
+    width: 50px;
+    height: 50px;
+    background: url('css_sprites.png') -300px -150px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+.menu>li>ul>li:last-child:hover:before{
+    background: url('css_sprites.png') -300px -100px;
+}
+.menu>li>ul>li:nth-child(3):before{
+    content:"";
+    width: 50px;
+    height: 50px;
+    background: url('css_sprites.png') -300px -100px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+.menu>li>ul>li:nth-child(3):hover:before{
+    background: url('css_sprites.png') -300px -150px;
+
+}
+
 
 /* Main */
 body{
@@ -233,6 +289,42 @@ a{
     width:400px;
 }
 
+/* Footer */
+.footer{
+    font-size: 0px;
+    text-align:center;
+}
+.footer>li{
+    display: inline-block;
+}
+.footer a{
+    width: 100px;
+    height: 100px;
+}
+.facebook a{
+    background: url('css_sprites.png') -100px -0;
+}
+.facebook:hover a{
+    background: url("css_sprites.png") -0 -0;
+}
+.instagram a{
+    background: url('css_sprites.png') -100px -100px;
+}
+.instagram:hover a{
+    background: url('css_sprites.png') -0 -100px;
+}
+.linkedin a{
+    background: url('css_sprites.png') -200px -100px;
+}
+.linkedin:hover a{
+    background: url('css_sprites.png') -200px -0;
+}
+.twitter a{
+    background: url('css_sprites.png') -100px -200px;
+}
+.twitter:hover a{
+    background: url('css_sprites.png') -0 -200px;
+}
 /* TableCell */
 .table{
     display: table-cell;
