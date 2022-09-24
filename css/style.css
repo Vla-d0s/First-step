@@ -79,26 +79,53 @@ body{
     height: 0px;
     overflow: hidden;
 }
-ul li:hover>ul{
+.menu>li:hover>ul{
     height: auto;
     overflow: visible;
-}
-.menu>li>ul{
     top:100%;
     left: 0px;
+    transition: top 1s cubic-bezier(0.56, 0.11, 0.74, 1.93),left 1s cubic-bezier(1, -0.83, 0.37, 2.05);
+}
+.menu>li>ul{
+    left: 100%;
+    top:-600%;
 }
 ul ul>li+li{
     border-top: 2px solid red;
 }
 .menu .menuFloat{
+    left:auto;
+    top: auto;
     right:100%;
     padding: 0px 20px 0px;
     bottom: 0px;
+    height:0px;
+}
+.menu .menuFloat>li{
+    height: 0px;
+    overflow:hidden;
+}
+
+.menu ul>li:hover>.menuFloat{
+    height: auto;
+}
+.menu ul>li:hover>.menuFloat>li{
+    height: 80px;
+    transition: all 500ms ease 500ms;
+}
+.menu ul>li:hover>.menuFloat>li+li{
+    transition: all 500ms ease;
+    height: 82px;
 }
 .menu .menuGrid{
     left: 100%;
     top:0px;
     padding: 0px 20px 0px;
+    height: 0px;
+    transition: all 1s ease-in-out;
+}
+.menu ul>li:hover>.menuGrid{
+    height: 213%;
 }
 .menu>li:first-child:after{
     content:"";
