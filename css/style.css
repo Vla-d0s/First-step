@@ -565,3 +565,217 @@ a{
 .d{
     grid-area:D;
 }
+
+/* Drawing_css */
+.screw{
+    margin: 200px 600px;
+    position:relative;
+}
+.screw .element1{
+    background: linear-gradient(to right, transparent 25%, pink 25%);
+    width: 100px;
+    height: 60px;
+    position:relative;
+}
+.screw .element1:after, .screw .element1:before{
+    content:'';
+    position:absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border: 100px solid transparent;
+    border-left-color: pink;
+    border-radius:100px;
+    transform: rotate(45deg) translate(29px,29px);
+}
+.screw .element1:before{
+    bottom: auto;
+    transform: rotate(-45deg) translate(29px, -29px);
+}
+.screw .element2{
+    height:75px;
+    width:250px;
+    margin-left:150px;
+    background: repeating-linear-gradient(-45deg, pink, pink 35px, black 13px, black 17%);
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+.screw .element2:after{
+    content:'';
+    height:75px;
+    width:50px;
+    background:pink;
+    position:absolute;
+    right:100%;
+}
+.bolt{
+    margin: 250px 600px;
+    background: radial-gradient(circle, transparent 25%, red 25%);
+    width:250px;
+    height:150px;
+    position: relative;
+}
+.bolt:after, .bolt:before{
+    content:'';
+    width: 0;
+    height: 0;
+    border-width: 0 125px 85px;
+    border-style:solid;
+    border-color: transparent transparent red;
+    position:absolute;
+    bottom:100%;
+}
+.bolt:before{
+    bottom:auto;
+    top:100%;
+    transform: rotate(180deg);
+}
+.spanner{
+    margin: 250px 500px;
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    box-shadow: 50px 50px 0 50px black;
+}
+.spanner:before{
+    content:'';
+    position:absolute;
+    width:400px;
+    height:100px;
+    border-radius: 0 70px 70px 0 / 0 25px 25px 0;
+    background: radial-gradient(circle closest-side at  90% 50%, transparent 50%, black 50%);
+    transform: rotate(45deg) translate(400px, 100px);
+}
+.nut{
+    margin: 450px 700px;
+    position: relative;
+    transform-origin: 0 0 0;
+    transform: rotate(45deg);
+}
+.nut .element1{
+    position: relative;
+    width: 80px;
+    height: 0;
+    border-style:solid;
+    border-width: 60px 0 60px 30px;
+    border-color:red transparent; 
+}
+.nut .element1:after, .nut .element1:before{
+    content:'';
+    position: absolute;
+    border-radius: 50%;
+    border: 100px solid red;
+    border-color:red red transparent transparent;
+    right:0;
+    bottom:0;
+    transform: rotate(-45deg) translate(-28px, 30px);
+}
+.nut .element1:before{
+    transform:rotate(135deg);
+    top:-40px;
+    left:-119px;
+}
+.nut .element2{
+    width:400px;
+    height:80px;
+    background: radial-gradient(circle closest-side at  90% 50%, transparent 50%, red 50%);
+    border-radius: 0 70px 70px 0 / 0 25px 25px 0;
+    position: absolute;
+    left: 0;
+    top:50%;
+    transform: translate(15%,-50%);
+}
+.ship {
+    margin: 600px 700px;
+    position: relative;
+    transform: rotate(-90deg);
+    max-width: 600px;
+}
+.ship .element1, .ship .element2, .ship .element3{
+    width:250px;
+    height:300px;
+    background: radial-gradient(circle, transparent 40%, aqua 40%);
+    position:relative;
+}
+.ship .element1:after{
+    content: "";
+    position:absolute;
+    width: 0;
+    height: 0;
+    border-top: 300px solid aqua;
+    border-left: 300px solid transparent;
+    transform-origin: 0 0 0;
+    transform:rotate(-45deg);
+}
+.ship .element1:before{
+    content: "";
+    position:absolute;
+    width: 900px;
+    height: 600px;
+    border-radius: 50%;
+    border-width: 400px 0 0 0;
+    border-style: solid;
+    border-color:aqua transparent transparent transparent;
+    transform: translate(250px,-50px);
+}
+.ship .element2:after{
+    content: "";
+    position:absolute;
+    left:380%;
+    top:50%;
+    width: 0px;
+    height: 250px;
+    border-width: 0 100px 100px 100px;
+    border-style: solid;
+    border-color: aqua aqua transparent aqua;
+}
+.ship .element2:before{
+    content: "";
+    position:absolute;
+    background: aqua;
+    height: 10px;
+    width: 900px;
+    left: 100%;
+    top: 50%;
+    margin-top:-5px;
+}
+.ship .element3:before{
+    content: "";
+    width:300px;
+    height:227px;
+    position:absolute;
+    background:aqua;
+    left:15%;
+    top:100%;
+    transform:rotate(62deg);
+}
+.ship .element3:after{
+    content: "";
+    position:absolute;
+    top:100%;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-left: 100px solid aqua;
+    transform-origin: 0 0 0;
+    transform:rotate(-27deg);
+    border-bottom: 50px solid transparent;
+}
+.ship .element4{
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    transform:rotate(45deg) translate(-50%, -150%);
+}
+.ship .element4:after{
+    content: "";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 0;
+    right: 0;
+    box-shadow: 300px 300px 0 0 aqua;
+}
