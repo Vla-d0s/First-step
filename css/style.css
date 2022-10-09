@@ -1,3 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@font-face {
+    font-family: 'volja';
+    src: url('../fonts/squirrel/volja-webfont.eot');
+    src: url('../fonts/squirrel/volja-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/squirrel/volja-webfont.woff2') format('woff2'),
+         url('../fonts/squirrel/volja-webfont.woff') format('woff'),
+         url('../fonts/squirrel/volja-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'inkulinati';
+    src: url('../fonts/onlineFontConverter/Inkulinati210706-Regular.eot');
+    src: url('../fonts/onlineFontConverter/Inkulinati210706-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/onlineFontConverter/Inkulinati210706-Regular.woff2') format('woff2'),
+         url('../fonts/onlineFontConverter/Inkulinati210706-Regular.woff') format('woff'),
+         url('../fonts/onlineFontConverter/Inkulinati210706-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
 /* Reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -52,8 +75,16 @@ body{
 .menu{
     position: relative;
     font-size: 0px;
+    font-family: 'Comfortaa', cursive;
     text-align:center;
     z-index: 5;
+    text-transform: uppercase;
+}
+.menu>li>ul{
+    font-family: volja;
+}
+.menu ul>li>ul{
+    font-family: inkulinati;
 }
 .menu li{
     background: yellowgreen;
